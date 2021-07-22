@@ -10,7 +10,7 @@ Request(title)
 function apikeyToFetch() {
   var search = document.getElementById("title").value;
   wrapper.innerHTML= ""
-  fetch(`http://www.omdbapi.com/?s=${search}&apikey=${api_key}`)
+  fetch(`https://www.omdbapi.com/?s=${search}&apikey=${api_key}`)
     .then((response) => response.json())
     .then((response) => {
       const movies = response.Search;
