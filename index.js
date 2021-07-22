@@ -1,3 +1,5 @@
+const api_key = 'c4b01846'
+
 const form = document.getElementById("button");
 const wrapper = document.querySelector(".parent");
 
@@ -5,10 +7,10 @@ const getTitle = () =>{
 let title = document.getElementById("title").value
 Request(title)
 }
-async function apikeyToFetch() {
+function apikeyToFetch() {
   var search = document.getElementById("title").value;
   wrapper.innerHTML= ""
-  await fetch(`http://www.omdbapi.com/?s=${search}&apikey=c4b01846`)
+  fetch(`http://www.omdbapi.com/?s=${search}&apikey=${api_key}`)
     .then((response) => response.json())
     .then((response) => {
       const movies = response.Search;
